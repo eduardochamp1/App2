@@ -4,8 +4,31 @@
              xmlns:local="clr-namespace:App2"
              x:Class="App2.MainPage">
 
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <StackLayout>
+        <Entry x:Name="Entry1" Placeholder="Matrícula" />
+
+        <Entry x:Nmae="Entry2" Keyboard="Numeric" Placeholder="Período"  />
+
+        <Picker x:Name="Picker" Title="Disciplina">
+            <Picker.Items>
+                <x:String>1 - Cáculo 1</x:String>
+                <x:String>2 - Introdução a Engenharia</x:String>
+                <x:String>3 Cáculço 2</x:String>
+                <x:String>4 - Projetos de Engenharia</x:String>
+            </Picker.Items>
+         </Picker>
+
+        <Label x:Name="Label1"  IsVisible="False"
+               Text="Matrícula Realizada."  TextColor="DarkGreen" />
+
+        <Label x:Nmae="Label2"  IsVisible="False"
+               Text="Não Foi Possivel Realizar a Matrícula."  TextColor="Red"  />
+
+        <Button x:Name="Button" Text="Matrícula"
+                VerticalOptions="EndAndExpand"
+                HorizontalOptions="Center"
+                Clicked="OnButtonClicked"  />
+        
+    </StackLayout>
 
 </ContentPage>
